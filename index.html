@@ -106,8 +106,9 @@
         }
         
         .card-dark {
-            background-color: rgba(30, 41, 59, 0.8);
+            background-color: rgba(15, 23, 42, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .section-title {
@@ -133,6 +134,15 @@
             width: 100%;
             height: 300px;
             margin: 1.5rem auto;
+            transition: all 0.3s ease;
+        }
+        
+        .dark-theme .chart-container {
+            background-color: rgba(15, 23, 42, 0.8);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .tab-container {
@@ -152,10 +162,24 @@
             border: 1px solid var(--border-light);
         }
         
+        .dark-theme .tab {
+            border-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+        }
+        
         .tab.active {
             background-color: var(--primary);
             color: white;
             border-color: var(--primary);
+        }
+        
+        .dark-theme .tab.active {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .dark-theme .tab:hover:not(.active) {
+            background-color: rgba(255, 255, 255, 0.05);
         }
         
         .tab-content {
@@ -173,11 +197,21 @@
             padding: 1.5rem;
             text-align: center;
             border-left: 5px solid var(--primary);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .dark-theme .kpi-card {
+            background-color: rgba(15, 23, 42, 0.9);
+            border-left: 5px solid var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .kpi-card:hover {
             transform: translateY(-5px);
+        }
+        
+        .dark-theme .kpi-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
         
         .kpi-value {
@@ -197,7 +231,13 @@
             border-radius: 0.75rem;
             padding: 1.5rem;
             border: 1px solid var(--border-light);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .dark-theme .feature-card {
+            background-color: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .feature-card:hover {
@@ -205,18 +245,34 @@
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
         }
         
+        .dark-theme .feature-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
         .flowchart-step {
             border: 2px solid var(--primary);
             background-color: rgba(59, 130, 246, 0.1);
             color: var(--primary-dark);
             border-radius: 0.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
             padding: 1rem;
+        }
+        
+        .dark-theme .flowchart-step {
+            background-color: rgba(59, 130, 246, 0.15);
+            color: var(--primary-light);
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .flowchart-step:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dark-theme .flowchart-step:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(59, 130, 246, 0.2);
         }
         
         table {
@@ -1856,8 +1912,24 @@
             function updateChartTheme(isDark) {
                 const textColor = isDark ? '#f1f5f9' : '#334155';
                 const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : '#f1f5f9';
-                const tooltipBgColor = isDark ? 'rgba(30, 41, 59, 0.9)' : 'rgba(255, 255, 255, 0.9)';
+                const tooltipBgColor = isDark ? 'rgba(15, 23, 42, 0.95)' : 'rgba(255, 255, 255, 0.9)';
                 const tooltipBorderColor = isDark ? 'rgba(255, 255, 255, 0.2)' : '#e2e8f0';
+                const chartBgColor = isDark ? 'rgba(15, 23, 42, 0.8)' : 'white';
+                
+                // Update chart container backgrounds
+                document.querySelectorAll('.chart-container').forEach(container => {
+                    container.style.backgroundColor = chartBgColor;
+                    container.style.borderRadius = '0.5rem';
+                    if (isDark) {
+                        container.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
+                        container.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+                        container.style.padding = '0.5rem';
+                    } else {
+                        container.style.boxShadow = 'none';
+                        container.style.border = 'none';
+                        container.style.padding = '0';
+                    }
+                });
                 
                 const charts = [lifetimeVolumeChart, lifetimeUsersChart, lifetimeRevenueChart, marketShareChart, topEarnersChart];
                 
@@ -1872,6 +1944,9 @@
                         // Update scales
                         if (chart.options.scales.x) {
                             chart.options.scales.x.ticks.color = textColor;
+                            if (isDark && chart.options.scales.x.grid) {
+                                chart.options.scales.x.grid.color = gridColor;
+                            }
                         }
                         if (chart.options.scales.y) {
                             chart.options.scales.y.ticks.color = textColor;
