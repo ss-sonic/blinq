@@ -275,11 +275,16 @@
             background-color: rgba(59, 130, 246, 0.2);
         }
         
+        .overflow-x-auto {
+            -webkit-overflow-scrolling: touch;
+        }
+        
         table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
             margin: 1.5rem 0;
+            min-width: 650px; /* Ensure tables have minimum width for scrolling */
         }
         
         table th, table td {
@@ -331,6 +336,62 @@
             100% {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            h1.text-2xl {
+                font-size: 1.25rem;
+            }
+            
+            h2.text-3xl {
+                font-size: 1.5rem;
+            }
+            
+            h3.text-2xl {
+                font-size: 1.25rem;
+            }
+            
+            .text-lg {
+                font-size: 1rem;
+            }
+            
+            .kpi-value {
+                font-size: 2rem;
+            }
+            
+            .tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .card, .feature-card, .kpi-card {
+                padding: 1.25rem;
+            }
+            
+            .section {
+                padding: 2.5rem 0;
+            }
+            
+            .chart-container {
+                height: 250px;
+                margin: 1rem auto;
+            }
+            
+            table th, table td {
+                padding: 0.5rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 767px) {
+            .chart-container {
+                height: 350px;
             }
         }
         
@@ -398,6 +459,56 @@
             color: var(--primary);
             text-decoration: underline;
         }
+
+        /* Mobile menu styles */
+        .mobile-menu-toggle {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+        }
+        
+        .mobile-menu-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .dark-theme .mobile-menu-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .dark-theme .mobile-menu-toggle svg {
+            stroke: var(--text-light);
+        }
+        
+        .light-theme .mobile-menu-toggle svg {
+            stroke: var(--text-dark);
+        }
+        
+        /* Fix table scrolling on mobile */
+        @media (max-width: 767px) {
+            .tab-container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .overflow-x-auto {
+                margin: 0 -1rem;
+                padding: 0 1rem;
+            }
+            
+            #mobile-menu a {
+                display: block;
+                width: 100%;
+                padding: 0.75rem 0;
+            }
+        }
     </style>
 </head>
 <body class="light-theme">
@@ -409,7 +520,7 @@
                     <p class="text-sm text-slate-600 font-medium">Market Analysis • Q2 2025</p>
                 </div>
                 <div class="flex items-center gap-4">
-                    <nav>
+                    <nav class="hidden md:block">
                         <ul class="flex gap-6">
                             <li><a href="#overview" class="hover:text-primary transition-colors">Overview</a></li>
                             <li><a href="#ecosystem" class="hover:text-primary transition-colors">Ecosystem</a></li>
@@ -418,6 +529,13 @@
                             <li><a href="#future" class="hover:text-primary transition-colors">Future</a></li>
                         </ul>
                     </nav>
+                    <button class="mobile-menu-toggle md:hidden" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun hidden">
                             <circle cx="12" cy="12" r="5"></circle>
@@ -439,6 +557,27 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end p-4">
+            <button id="close-mobile-menu" class="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-full">
+            <ul class="flex flex-col gap-8 text-center">
+                <li><a href="#overview" class="text-white text-2xl font-bold hover:text-primary transition-colors">Overview</a></li>
+                <li><a href="#ecosystem" class="text-white text-2xl font-bold hover:text-primary transition-colors">Ecosystem</a></li>
+                <li><a href="#competitors" class="text-white text-2xl font-bold hover:text-primary transition-colors">Competitors</a></li>
+                <li><a href="#strategies" class="text-white text-2xl font-bold hover:text-primary transition-colors">Strategies</a></li>
+                <li><a href="#future" class="text-white text-2xl font-bold hover:text-primary transition-colors">Future</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main class="container py-8">
         <!-- Overview Section -->
         <section id="overview" class="section">
@@ -447,10 +586,10 @@
                 This analysis captures the overarching scale and activity within the Solana pro-trading market, underscoring its vibrancy and potential. The data reveals a highly active and lucrative environment.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12" data-aos="fade-up" data-aos-delay="200">
                 <div class="kpi-card shadow-md">
                     <div class="kpi-value" data-count="80">0</div>
-                    <div class="font-bold text-xl ">$B+</div>
+                    <div class="font-bold text-xl">$B+</div>
                     <div class="kpi-label mt-2">Combined Lifetime Trading Volume</div>
                 </div>
                 <div class="kpi-card shadow-md">
@@ -458,7 +597,7 @@
                     <div class="font-bold text-xl text-primary">M+</div>
                     <div class="kpi-label mt-2">Combined User Base</div>
                 </div>
-                <div class="kpi-card shadow-md">
+                <div class="kpi-card shadow-md sm:col-span-2 md:col-span-1">
                     <div class="kpi-value" data-count="700">0</div>
                     <div class="font-bold text-xl text-primary">$M+</div>
                     <div class="kpi-label mt-2">Combined Estimated Revenue</div>
@@ -592,9 +731,9 @@
                 Understanding the foundational elements and user demands of this ecosystem is crucial. Solana's unique technological advantages combined with market phenomena have created a fertile ground for specialized trading platforms.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-10" data-aos="fade-up">
                 <div class="feature-card">
-                    <h3 class="text-2xl font-semibold mb-6 text-primary">Key Drivers</h3>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">Key Drivers</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
@@ -778,27 +917,27 @@
                 This section provides a comparative look at the leading platforms in the Solana pro-trading space. The data highlights their significant scale in terms of volume, user base, and revenue generation.
             </p>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-6 sm:mb-10" data-aos="fade-up">
                 <div class="feature-card">
-                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Lifetime Volume (Solana)</h3>
-                    <div class="chart-container h-80">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Volume (Solana)</h3>
+                    <div class="chart-container h-60 sm:h-80">
                         <canvas id="lifetimeVolumeChart"></canvas>
                     </div>
-                    <p class="text-sm text-slate-800 mt-4 text-center">Photon and Trojan show immense lifetime volumes, indicating their deep market penetration.</p>
+                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Photon and Trojan show immense lifetime volumes, indicating their deep market penetration.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Lifetime Users (Solana)</h3>
-                    <div class="chart-container h-80">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Users (Solana)</h3>
+                    <div class="chart-container h-60 sm:h-80">
                         <canvas id="lifetimeUsersChart"></canvas>
                     </div>
-                    <p class="text-sm text-slate-800 mt-4 text-center">Trojan and Photon boast the largest user bases, a testament to their effective acquisition strategies.</p>
+                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Trojan and Photon boast the largest user bases, a testament to their effective acquisition strategies.</p>
                 </div>
-                <div class="feature-card">
-                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Lifetime Revenue (Solana)</h3>
-                    <div class="chart-container h-80">
+                <div class="feature-card md:col-span-2 lg:col-span-1">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Revenue (Solana)</h3>
+                    <div class="chart-container h-60 sm:h-80">
                         <canvas id="lifetimeRevenueChart"></canvas>
                     </div>
-                    <p class="text-sm text-slate-800 mt-4 text-center">Photon leads in reported lifetime revenue, showcasing strong monetization capabilities.</p>
+                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Photon leads in reported lifetime revenue, showcasing strong monetization capabilities.</p>
                 </div>
             </div>
 
@@ -1403,12 +1542,12 @@
 
         <!-- Future Section -->
         <section id="future" class="section">
-            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">Future Horizons: Emerging Trends</h2>
-            <p class="text-lg text-slate-800 mb-8 max-w-3xl" data-aos="fade-up">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-6 sm:mb-8" data-aos="fade-right">Future Horizons: Emerging Trends</h2>
+            <p class="text-base sm:text-lg text-slate-800 mb-6 sm:mb-8 max-w-3xl" data-aos="fade-up">
                 The Solana pro-trading landscape is expected to continue evolving with new technological advancements and shifting user demands. These emerging trends will shape the next generation of trading tools.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" data-aos="fade-up">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-10" data-aos="fade-up">
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
@@ -1514,12 +1653,12 @@
 
         <!-- Blinq Section -->
         <section id="blinq" class="section">
-            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">Blinq's Battlefield: Strategic Considerations</h2>
-            <p class="text-lg text-slate-800 mb-8 max-w-3xl" data-aos="fade-up">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-6 sm:mb-8" data-aos="fade-right">Blinq's Battlefield: Strategic Considerations</h2>
+            <p class="text-base sm:text-lg text-slate-800 mb-6 sm:mb-8 max-w-3xl" data-aos="fade-up">
                 This analysis provides a foundation for Blinq to carve out its unique position and capitalize on market opportunities. Understanding competitor strengths and market dynamics is crucial for success.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-8" data-aos="fade-up">
                 <div class="feature-card p-6">
                     <h3 class="text-2xl font-semibold mb-6 text-primary text-center">Key Learnings for Blinq</h3>
                     <ul class="space-y-4">
@@ -1747,6 +1886,31 @@
 
         // Initialize AOS animation library and charts
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu && closeMobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.remove('translate-x-full');
+                    document.body.classList.add('overflow-hidden');
+                });
+                
+                closeMobileMenu.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+                
+                // Close mobile menu when clicking on a link
+                document.querySelectorAll('#mobile-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('translate-x-full');
+                        document.body.classList.remove('overflow-hidden');
+                    });
+                });
+            }
+            
             AOS.init({
                 duration: 800,
                 easing: 'ease-in-out',
@@ -1814,23 +1978,6 @@
             window.addEventListener('scroll', highlightNavOnScroll);
             // Call once on page load
             highlightNavOnScroll();
-            
-            // Mobile menu toggle
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-                
-                // Close mobile menu when clicking on a link
-                document.querySelectorAll('#mobile-menu a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
         });
 
         // Chart configuration functions
