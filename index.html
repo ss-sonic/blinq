@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,49 +25,50 @@
             --text-light: #f1f5f9;
             --border-light: #e2e8f0;
         }
-        
+
         .blinq-card-text {
             color: var(--text-dark) !important;
         }
+
         .dark-theme .blinq-card-text {
             color: var(--text-light) !important;
         }
-        
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
         }
-        
+
         .light-theme {
             background-color: var(--bg-light);
             color: var(--text-dark);
         }
-        
+
         .dark-theme {
             background-color: var(--bg-dark);
             color: var(--text-light);
         }
-        
+
         .container {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
-        
+
         .header {
             position: sticky;
             top: 0;
@@ -74,22 +76,22 @@
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
-        
+
         .header-light {
             background-color: rgba(248, 250, 252, 0.9);
             border-bottom: 1px solid var(--border-light);
         }
-        
+
         .header-dark {
             background-color: rgba(30, 41, 59, 0.9);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .section {
             padding: 4rem 0;
             position: relative;
         }
-        
+
         .card {
             background-color: white;
             border-radius: 1rem;
@@ -99,18 +101,18 @@
             border: 1px solid var(--border-light);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .card-dark {
             background-color: rgba(15, 23, 42, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .section-title {
             position: relative;
             color: var(--primary);
@@ -118,7 +120,7 @@
             margin-bottom: 1.5rem;
             display: inline-block;
         }
-        
+
         .section-title::after {
             content: "";
             position: absolute;
@@ -128,7 +130,7 @@
             height: 3px;
             background-color: var(--primary);
         }
-        
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -136,7 +138,7 @@
             margin: 1.5rem auto;
             transition: all 0.3s ease;
         }
-        
+
         .dark-theme .chart-container {
             background-color: rgba(15, 23, 42, 0.8);
             border-radius: 0.5rem;
@@ -144,14 +146,14 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .tab-container {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .tab {
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
@@ -161,36 +163,36 @@
             background-color: transparent;
             border: 1px solid var(--border-light);
         }
-        
+
         .dark-theme .tab {
             border-color: rgba(255, 255, 255, 0.1);
             color: var(--text-light);
         }
-        
+
         .tab.active {
             background-color: var(--primary);
             color: white;
             border-color: var(--primary);
         }
-        
+
         .dark-theme .tab.active {
             background-color: var(--primary-dark);
             border-color: var(--primary-dark);
         }
-        
+
         .dark-theme .tab:hover:not(.active) {
             background-color: rgba(255, 255, 255, 0.05);
         }
-        
+
         .tab-content {
             display: none;
         }
-        
+
         .tab-content.active {
             display: block;
             animation: fadeIn 0.5s ease-in-out;
         }
-        
+
         .kpi-card {
             background-color: white;
             border-radius: 0.75rem;
@@ -199,33 +201,33 @@
             border-left: 5px solid var(--primary);
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-        
+
         .dark-theme .kpi-card {
             background-color: rgba(15, 23, 42, 0.9);
             border-left: 5px solid var(--primary-dark);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .kpi-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .dark-theme .kpi-card:hover {
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .kpi-value {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
         }
-        
+
         .kpi-label {
             font-size: 0.875rem;
             color: var(--text-dark);
             font-weight: 500;
         }
-        
+
         .feature-card {
             background-color: white;
             border-radius: 0.75rem;
@@ -233,22 +235,22 @@
             border: 1px solid var(--border-light);
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
-        
+
         .dark-theme .feature-card {
             background-color: rgba(15, 23, 42, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .dark-theme .feature-card:hover {
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .flowchart-step {
             border: 2px solid var(--primary);
             background-color: rgba(59, 130, 246, 0.1);
@@ -257,55 +259,57 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
             padding: 1rem;
         }
-        
+
         .dark-theme .flowchart-step {
             background-color: rgba(59, 130, 246, 0.15);
             color: var(--primary-light);
             border-color: var(--primary-dark);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .flowchart-step:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .dark-theme .flowchart-step:hover {
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
             background-color: rgba(59, 130, 246, 0.2);
         }
-        
+
         .overflow-x-auto {
             -webkit-overflow-scrolling: touch;
         }
-        
+
         table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
             margin: 1.5rem 0;
-            min-width: 650px; /* Ensure tables have minimum width for scrolling */
+            min-width: 650px;
+            /* Ensure tables have minimum width for scrolling */
         }
-        
-        table th, table td {
+
+        table th,
+        table td {
             border: 1px solid var(--border-light);
             padding: 0.75rem;
             text-align: left;
         }
-        
+
         table th {
             background-color: rgba(59, 130, 246, 0.1);
             font-weight: 600;
         }
-        
+
         table th:first-child {
             border-top-left-radius: 0.5rem;
         }
-        
+
         table th:last-child {
             border-top-right-radius: 0.5rem;
         }
-        
+
         .theme-toggle {
             background-color: transparent;
             cursor: pointer;
@@ -319,71 +323,75 @@
             border-radius: 50%;
             transition: background-color 0.3s ease;
         }
-        
+
         .theme-toggle:hover {
             background-color: rgba(0, 0, 0, 0.05);
         }
-        
+
         .theme-toggle.dark:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* Mobile styles */
         @media (max-width: 640px) {
             .container {
                 padding: 0 1rem;
             }
-            
+
             h1.text-2xl {
                 font-size: 1.25rem;
             }
-            
+
             h2.text-3xl {
                 font-size: 1.5rem;
             }
-            
+
             h3.text-2xl {
                 font-size: 1.25rem;
             }
-            
+
             .text-lg {
                 font-size: 1rem;
             }
-            
+
             .kpi-value {
                 font-size: 2rem;
             }
-            
+
             .tab {
                 padding: 0.5rem 1rem;
                 font-size: 0.875rem;
             }
-            
-            .card, .feature-card, .kpi-card {
+
+            .card,
+            .feature-card,
+            .kpi-card {
                 padding: 1.25rem;
             }
-            
+
             .section {
                 padding: 2.5rem 0;
             }
-            
+
             .chart-container {
                 height: 250px;
                 margin: 1rem auto;
             }
-            
-            table th, table td {
+
+            table th,
+            table td {
                 padding: 0.5rem;
                 font-size: 0.875rem;
             }
@@ -394,13 +402,13 @@
                 height: 350px;
             }
         }
-        
+
         @media (min-width: 768px) {
             .chart-container {
                 height: 400px;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .chart-container {
                 height: 450px;
@@ -472,23 +480,23 @@
             padding: 0.5rem;
             border-radius: 0.25rem;
         }
-        
+
         .mobile-menu-toggle:hover {
             background-color: rgba(0, 0, 0, 0.05);
         }
-        
+
         .dark-theme .mobile-menu-toggle:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
+
         .dark-theme .mobile-menu-toggle svg {
             stroke: var(--text-light);
         }
-        
+
         .light-theme .mobile-menu-toggle svg {
             stroke: var(--text-dark);
         }
-        
+
         /* Fix table scrolling on mobile */
         @media (max-width: 767px) {
             .tab-container {
@@ -497,12 +505,12 @@
                 padding-bottom: 5px;
                 -webkit-overflow-scrolling: touch;
             }
-            
+
             .overflow-x-auto {
                 margin: 0 -1rem;
                 padding: 0 1rem;
             }
-            
+
             #mobile-menu a {
                 display: block;
                 width: 100%;
@@ -511,6 +519,7 @@
         }
     </style>
 </head>
+
 <body class="light-theme">
     <header class="header header-light">
         <div class="container py-4">
@@ -529,15 +538,19 @@
                             <li><a href="#future" class="hover:text-primary transition-colors">Future</a></li>
                         </ul>
                     </nav>
-                    <button class="mobile-menu-toggle md:hidden" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <button class="mobile-menu-toggle md:hidden" id="mobile-menu-toggle"
+                        aria-label="Toggle mobile menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="3" y1="12" x2="21" y2="12"></line>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </button>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="sun hidden">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
                             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -548,7 +561,9 @@
                             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="moon">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
                     </button>
@@ -558,10 +573,12 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <div class="flex justify-end p-4">
             <button id="close-mobile-menu" class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
@@ -569,11 +586,16 @@
         </div>
         <nav class="flex flex-col items-center justify-center h-full">
             <ul class="flex flex-col gap-8 text-center">
-                <li><a href="#overview" class="text-white text-2xl font-bold hover:text-primary transition-colors">Overview</a></li>
-                <li><a href="#ecosystem" class="text-white text-2xl font-bold hover:text-primary transition-colors">Ecosystem</a></li>
-                <li><a href="#competitors" class="text-white text-2xl font-bold hover:text-primary transition-colors">Competitors</a></li>
-                <li><a href="#strategies" class="text-white text-2xl font-bold hover:text-primary transition-colors">Strategies</a></li>
-                <li><a href="#future" class="text-white text-2xl font-bold hover:text-primary transition-colors">Future</a></li>
+                <li><a href="#overview"
+                        class="text-white text-2xl font-bold hover:text-primary transition-colors">Overview</a></li>
+                <li><a href="#ecosystem"
+                        class="text-white text-2xl font-bold hover:text-primary transition-colors">Ecosystem</a></li>
+                <li><a href="#competitors"
+                        class="text-white text-2xl font-bold hover:text-primary transition-colors">Competitors</a></li>
+                <li><a href="#strategies"
+                        class="text-white text-2xl font-bold hover:text-primary transition-colors">Strategies</a></li>
+                <li><a href="#future"
+                        class="text-white text-2xl font-bold hover:text-primary transition-colors">Future</a></li>
             </ul>
         </nav>
     </div>
@@ -583,10 +605,12 @@
         <section id="overview" class="section">
             <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">Market at a Glance</h2>
             <p class="text-lg text-text-medium mb-8 max-w-3xl" data-aos="fade-up">
-                This analysis captures the overarching scale and activity within the Solana pro-trading market, underscoring its vibrancy and potential. The data reveals a highly active and lucrative environment.
+                This analysis captures the overarching scale and activity within the Solana pro-trading market,
+                underscoring its vibrancy and potential. The data reveals a highly active and lucrative environment.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12" data-aos="fade-up"
+                data-aos-delay="200">
                 <div class="kpi-card shadow-md">
                     <div class="kpi-value" data-count="80">0</div>
                     <div class="font-bold text-xl">$B+</div>
@@ -606,117 +630,139 @@
 
             <div class="card" data-aos="fade-up">
                 <h3 class="text-2xl font-bold mb-4 text-primary">Executive Summary</h3>
-                
+
                 <div class="tab-container">
                     <button class="tab active" data-tab="insights">Key Insights</button>
                     <button class="tab" data-tab="positioning">Positioning</button>
                     <button class="tab" data-tab="market-validation">Market Validation</button>
                 </div>
-                
+
                 <div class="tab-content active" id="insights">
                     <h4 class="text-xl font-semibold mb-3">Key Strategic Insights for Blinq</h4>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold text-primary">Performance is Paramount:</span> "Performant infra" is a core requirement. Sniping capabilities, MEV protection, and low-latency execution are table stakes for pro-traders.
+                                <span class="font-semibold text-primary">Performance is Paramount:</span> "Performant
+                                infra" is a core requirement. Sniping capabilities, MEV protection, and low-latency
+                                execution are table stakes for pro-traders.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold text-primary">GTM & Community are Crucial:</span> Successful platforms leverage strong referral programs (Trojan, Axiom), KOL engagement (Axiom), and early organic traction through unique features (Photon's sniping). Telegram presence is vital.
+                                <span class="font-semibold text-primary">GTM & Community are Crucial:</span> Successful
+                                platforms leverage strong referral programs (Trojan, Axiom), KOL engagement (Axiom), and
+                                early organic traction through unique features (Photon's sniping). Telegram presence is
+                                vital.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold text-primary">Revenue Models:</span> A ~0.7-1% fee on transactions is standard. Referral bonuses and tiered fees (Axiom) can drive adoption.
+                                <span class="font-semibold text-primary">Revenue Models:</span> A ~0.7-1% fee on
+                                transactions is standard. Referral bonuses and tiered fees (Axiom) can drive adoption.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold text-primary">Feature Richness vs. Simplicity:</span> While Axiom aims for feature richness, Trojan's success highlights the power of a simple, effective Telegram-native experience.
+                                <span class="font-semibold text-primary">Feature Richness vs. Simplicity:</span> While
+                                Axiom aims for feature richness, Trojan's success highlights the power of a simple,
+                                effective Telegram-native experience.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold text-primary">The "Meme Centric" Angle:</span> This is a dominant narrative. Tools and features that cater specifically to the fast-paced, high-risk/reward nature of meme coin trading are essential.
+                                <span class="font-semibold text-primary">The "Meme Centric" Angle:</span> This is a
+                                dominant narrative. Tools and features that cater specifically to the fast-paced,
+                                high-risk/reward nature of meme coin trading are essential.
                             </div>
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="tab-content" id="positioning">
                     <h4 class="text-xl font-semibold mb-3">Positioning Blinq for Success</h4>
-                    <p class="mb-4">This analysis empowers Blinq to make strategic decisions in a competitive landscape:</p>
+                    <p class="mb-4">This analysis empowers Blinq to make strategic decisions in a competitive landscape:
+                    </p>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <span class="text-secondary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Identify feature gaps and opportunities</span> for innovation (e.g., superior sniping infrastructure, unique reward structures).
+                                <span class="font-semibold">Identify feature gaps and opportunities</span> for
+                                innovation (e.g., superior sniping infrastructure, unique reward structures).
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-secondary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Craft a targeted GTM strategy</span> focusing on influential trading operators and compelling referral mechanics.
+                                <span class="font-semibold">Craft a targeted GTM strategy</span> focusing on influential
+                                trading operators and compelling referral mechanics.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-secondary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Benchmark performance and fee structures</span> against established players to ensure competitive positioning.
+                                <span class="font-semibold">Benchmark performance and fee structures</span> against
+                                established players to ensure competitive positioning.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-secondary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Emphasize Solana-centric strengths</span> and the meme coin/trader focus in all marketing efforts.
+                                <span class="font-semibold">Emphasize Solana-centric strengths</span> and the meme
+                                coin/trader focus in all marketing efforts.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-secondary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Untapped potential in rewards:</span> Blinq's ideas for physical asset rewards and deeper trading operator incentives could be a significant differentiator.
+                                <span class="font-semibold">Untapped potential in rewards:</span> Blinq's ideas for
+                                physical asset rewards and deeper trading operator incentives could be a significant
+                                differentiator.
                             </div>
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="tab-content" id="market-validation">
                     <h4 class="text-xl font-semibold mb-3">Market Validation</h4>
                     <p class="mb-4">The substantial metrics of competitors confirm significant market demand:</p>
-                    
+
                     <div class="bg-primary bg-opacity-10 p-4 rounded-lg border-l-4 border-primary mb-4">
-                        <p class="font-semibold">The Solana pro-trading market is validated, experiencing high growth, and characterized by intense competition.</p>
+                        <p class="font-semibold">The Solana pro-trading market is validated, experiencing high growth,
+                            and characterized by intense competition.</p>
                     </div>
-                    
+
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <span class="text-accent mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Substantial Volume:</span> The $80B+ trading volume across platforms demonstrates massive capital flow and liquidity.
+                                <span class="font-semibold">Substantial Volume:</span> The $80B+ trading volume across
+                                platforms demonstrates massive capital flow and liquidity.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-accent mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Strong User Base:</span> 4M+ users indicates significant adoption and platform engagement.
+                                <span class="font-semibold">Strong User Base:</span> 4M+ users indicates significant
+                                adoption and platform engagement.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-accent mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Revenue Potential:</span> $700M+ in combined revenue shows the monetization opportunity for well-executed trading platforms.
+                                <span class="font-semibold">Revenue Potential:</span> $700M+ in combined revenue shows
+                                the monetization opportunity for well-executed trading platforms.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-accent mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Competitive Landscape:</span> Competition is intense but opportunities exist for platforms with the right features, performance, and positioning.
+                                <span class="font-semibold">Competitive Landscape:</span> Competition is intense but
+                                opportunities exist for platforms with the right features, performance, and positioning.
                             </div>
                         </li>
                     </ul>
@@ -726,9 +772,12 @@
 
         <!-- Ecosystem Section -->
         <section id="ecosystem" class="section">
-            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">The Solana Pro-Trading Ecosystem</h2>
+            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">The Solana Pro-Trading Ecosystem
+            </h2>
             <p class="text-lg text-text-medium mb-8 max-w-3xl" data-aos="fade-up">
-                Understanding the foundational elements and user demands of this ecosystem is crucial. Solana's unique technological advantages combined with market phenomena have created a fertile ground for specialized trading platforms.
+                Understanding the foundational elements and user demands of this ecosystem is crucial. Solana's unique
+                technological advantages combined with market phenomena have created a fertile ground for specialized
+                trading platforms.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-10" data-aos="fade-up">
@@ -736,41 +785,58 @@
                     <h3 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">Key Drivers</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-primary">
                                     <polyline points="13 17 18 12 13 7"></polyline>
                                     <polyline points="6 17 11 12 6 7"></polyline>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Solana's Technological Edge:</span> High throughput, low transaction fees, and fast block times create the perfect environment for rapid trading.
+                                <span class="font-semibold">Solana's Technological Edge:</span> High throughput, low
+                                transaction fees, and fast block times create the perfect environment for rapid trading.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-primary">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <line x1="12" y1="8" x2="12" y2="16"></line>
                                     <line x1="8" y1="12" x2="16" y2="12"></line>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">The Memecoin Phenomenon:</span> Drives significant volume and attracts a specific trader demographic focused on rapid gains and high volatility.
+                                <span class="font-semibold">The Memecoin Phenomenon:</span> Drives significant volume
+                                and attracts a specific trader demographic focused on rapid gains and high volatility.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-primary">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Telegram Bot Dominance:</span> Many successful platforms leverage Telegram for its accessibility and large crypto user base.
+                                <span class="font-semibold">Telegram Bot Dominance:</span> Many successful platforms
+                                leverage Telegram for its accessibility and large crypto user base.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-primary">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -778,29 +844,37 @@
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Retail & Pro Trader Convergence:</span> Tools often cater to both sophisticated traders and enthusiastic retail participants.
+                                <span class="font-semibold">Retail & Pro Trader Convergence:</span> Tools often cater to
+                                both sophisticated traders and enthusiastic retail participants.
                             </div>
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="feature-card">
                     <h3 class="text-2xl font-semibold mb-6 text-primary">Core Features Demanded</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-secondary">
                                     <polyline points="13 2 13 9 20 9"></polyline>
                                     <path d="M13 2L2 13 9 20 20 9 13 2z"></path>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Speed & Performance:</span> Millisecond advantages are critical for successfully executing trades ahead of competitors.
+                                <span class="font-semibold">Speed & Performance:</span> Millisecond advantages are
+                                critical for successfully executing trades ahead of competitors.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-secondary">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <line x1="22" y1="12" x2="18" y2="12"></line>
                                     <line x1="6" y1="12" x2="2" y2="12"></line>
@@ -809,40 +883,53 @@
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Sniping Capabilities:</span> Tools for identifying and executing trades on newly launched tokens at earliest possible moments.
+                                <span class="font-semibold">Sniping Capabilities:</span> Tools for identifying and
+                                executing trades on newly launched tokens at earliest possible moments.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-secondary">
                                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">MEV Protection:</span> Safeguards against front-running and sandwich attacks that can diminish trade profitability.
+                                <span class="font-semibold">MEV Protection:</span> Safeguards against front-running and
+                                sandwich attacks that can diminish trade profitability.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-secondary">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15 3 21 3 21 9"></polyline>
                                     <line x1="10" y1="14" x2="21" y2="3"></line>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Advanced Order Types:</span> Limit orders, stop-loss, take-profit, and dollar-cost averaging strategies.
+                                <span class="font-semibold">Advanced Order Types:</span> Limit orders, stop-loss,
+                                take-profit, and dollar-cost averaging strategies.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-secondary">
                                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                                 </svg>
                             </div>
                             <div>
-                                <span class="font-semibold">Real-time Data & Analytics:</span> Fast chart updates, wallet tracking, token analysis for informed decisions.
+                                <span class="font-semibold">Real-time Data & Analytics:</span> Fast chart updates,
+                                wallet tracking, token analysis for informed decisions.
                             </div>
                         </li>
                     </ul>
@@ -850,100 +937,166 @@
             </div>
 
             <div class="card mt-10" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold mb-6 text-primary text-center">Ecosystem Flow: The Pump.fun Influence</h3>
+                <h3 class="text-2xl font-semibold mb-6 text-primary text-center">Ecosystem Flow: The Pump.fun Influence
+                </h3>
                 <p class="text-text-medium mb-8 text-center max-w-3xl mx-auto">
-                    This flow illustrates how platforms like Pump.fun act as an incubator for new tokens, which then become trading opportunities on broader DEXs and through specialized trading bots. This cycle fuels a significant portion of the ecosystem's activity.
+                    This flow illustrates how platforms like Pump.fun act as an incubator for new tokens, which then
+                    become trading opportunities on broader DEXs and through specialized trading bots. This cycle fuels
+                    a significant portion of the ecosystem's activity.
                 </p>
 
-                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4 mb-6">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4 mb-6">
                     <div class="flowchart-step p-4 text-center w-full md:w-1/4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                            1</div>
                         <h4 class="font-semibold text-lg">Token Creation</h4>
-                        <p class="text-text-medium">Users easily launch new meme coins with initial liquidity on a bonding curve.</p>
+                        <p class="text-text-medium">Users easily launch new meme coins with initial liquidity on a
+                            bonding curve.</p>
                     </div>
-                    
+
                     <div class="hidden md:block text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </div>
-                    
+
                     <div class="flowchart-step p-4 text-center w-full md:w-1/4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                            2</div>
                         <h4 class="font-semibold text-lg">Early Sniping</h4>
-                        <p class="text-text-medium">Bots and savvy traders monitor for new launches to acquire tokens at the earliest stage.</p>
+                        <p class="text-text-medium">Bots and savvy traders monitor for new launches to acquire tokens at
+                            the earliest stage.</p>
                     </div>
-                    
+
                     <div class="hidden md:block text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </div>
-                    
+
                     <div class="flowchart-step p-4 text-center w-full md:w-1/4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                            3</div>
                         <h4 class="font-semibold text-lg">Transition to DEXs</h4>
-                        <p class="text-text-medium">Successful tokens can "graduate" to larger Solana DEXs (e.g., Raydium).</p>
+                        <p class="text-text-medium">Successful tokens can "graduate" to larger Solana DEXs (e.g.,
+                            Raydium).</p>
                     </div>
-                    
+
                     <div class="hidden md:block text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </div>
-                    
+
                     <div class="flowchart-step p-4 text-center w-full md:w-1/4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                            4</div>
                         <h4 class="font-semibold text-lg">Broader Trading</h4>
-                        <p class="text-text-medium">Tokens are traded via various platforms and bots, contributing to overall volume.</p>
+                        <p class="text-text-medium">Tokens are traded via various platforms and bots, contributing to
+                            overall volume.</p>
                     </div>
                 </div>
-                
+
                 <div class="mt-6 text-center bg-primary bg-opacity-10 p-4 rounded-lg inline-block mx-auto">
                     <p class="text-text-medium">
-                        <span class="font-semibold">Note:</span> Many tokens have short lifecycles, emphasizing the need for speed and effective entry/exit strategies.
+                        <span class="font-semibold">Note:</span> Many tokens have short lifecycles, emphasizing the need
+                        for speed and effective entry/exit strategies.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Money Game Section -->
+        <section id="money-game" class="section">
+            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">The Money Game: Revenue & Market
+                Share</h2>
+            <p class="text-lg text-text-medium mb-8 max-w-3xl" data-aos="fade-up">
+                Monetization in this space is primarily driven by transaction fees, with market share being
+                highly contested. The data shows a dynamic market where new players can rapidly gain
+                traction.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10" data-aos="fade-up">
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Market Share Snapshot</h3>
+                    <p class="text-sm text-text-medium mb-4 text-center">Est. Daily Volume - Q1/Q2 2025</p>
+                    <div class="chart-container h-60 sm:h-80">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                    <p class="text-sm text-text-medium mt-4 text-center">Axiom demonstrated a significant surge in
+                        market share by early 2025. Photon maintained a strong position, with BullX and Trojan also as
+                        key players.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Top Earner Snapshot</h3>
+                    <p class="text-sm text-text-medium mb-4 text-center">Est. Lifetime Revenue</p>
+                    <div class="chart-container h-60 sm:h-80">
+                        <canvas id="topEarnersChart"></canvas>
+                    </div>
+                    <p class="text-sm text-text-medium mt-4 text-center">Photon leads in reported lifetime revenue.
+                        Axiom and Trojan also show substantial earnings, reflecting the high monetization potential in
+                        this space.</p>
                 </div>
             </div>
         </section>
 
         <!-- Competitors Section -->
         <section id="competitors" class="section">
-            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">Titans of Trade: Competitor Snapshot</h2>
+            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">Titans of Trade: Competitor Snapshot
+            </h2>
             <p class="text-lg text-slate-800 mb-8 max-w-3xl" data-aos="fade-up">
-                This section provides a comparative look at the leading platforms in the Solana pro-trading space. The data highlights their significant scale in terms of volume, user base, and revenue generation.
+                This section provides a comparative look at the leading platforms in the Solana pro-trading space. The
+                data highlights their significant scale in terms of volume, user base, and revenue generation.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-6 sm:mb-10" data-aos="fade-up">
                 <div class="feature-card">
-                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Volume (Solana)</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Volume
+                        (Solana)</h3>
                     <div class="chart-container h-60 sm:h-80">
                         <canvas id="lifetimeVolumeChart"></canvas>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Photon and Trojan show immense lifetime volumes, indicating their deep market penetration.</p>
+                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Photon and Trojan show immense
+                        lifetime volumes, indicating their deep market penetration.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Users (Solana)</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Users
+                        (Solana)</h3>
                     <div class="chart-container h-60 sm:h-80">
                         <canvas id="lifetimeUsersChart"></canvas>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Trojan and Photon boast the largest user bases, a testament to their effective acquisition strategies.</p>
+                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Trojan and Photon boast the
+                        largest user bases, a testament to their effective acquisition strategies.</p>
                 </div>
                 <div class="feature-card md:col-span-2 lg:col-span-1">
-                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Revenue (Solana)</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary text-center">Lifetime Revenue
+                        (Solana)</h3>
                     <div class="chart-container h-60 sm:h-80">
                         <canvas id="lifetimeRevenueChart"></canvas>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Photon leads in reported lifetime revenue, showcasing strong monetization capabilities.</p>
+                    <p class="text-xs sm:text-sm text-slate-800 mt-3 sm:mt-4 text-center">Photon leads in reported
+                        lifetime revenue. Axiom and Trojan also show substantial earnings, reflecting the high
+                        monetization potential in this space.</p>
                 </div>
             </div>
 
             <div class="card mb-10" data-aos="fade-up">
                 <h3 class="text-2xl font-semibold mb-6 text-primary">Competitor Overview & Key Metrics</h3>
-                
+
                 <div class="overflow-x-auto">
                     <table>
                         <thead>
@@ -953,6 +1106,10 @@
                                 <th>Photon</th>
                                 <th>Axiom</th>
                                 <th>Trojan (Solana)</th>
+                                <th>Drift Protocol</th>
+                                <th>Phoenix</th>
+                                <th>Openbook</th>
+                                <th>BONKBot</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -962,6 +1119,10 @@
                                 <td>Solana Meme Coins, Sniping, Web-based UX, Speed</td>
                                 <td>Solana Pro Trading, Meme Coins, Feature Richness</td>
                                 <td>Solana Meme Coins, Telegram Bot, User-Friendliness</td>
+                                <td>Perpetuals DEX, Cross-margining, Advanced Derivatives Trading</td>
+                                <td>CLOB DEX, Instant Settlement, Market Maker Focused</td>
+                                <td>CLOB DEX Infrastructure, Community Fork, Public Good</td>
+                                <td>Telegram Trading Bot, High-Speed Memecoin Trading</td>
                             </tr>
                             <tr>
                                 <td><strong>Revenue Model</strong></td>
@@ -969,6 +1130,10 @@
                                 <td>~1% on buy/sell</td>
                                 <td>0.7% - 0.9% (with referrals)</td>
                                 <td>~1% (0.9% for referred users)</td>
+                                <td>Trading fees, DRIFT token utility</td>
+                                <td>"Market Rent" - MMs stake FIRE for fee share</td>
+                                <td>4 bps taker fee, 2 bps maker rebate, 2 bps UI rebate</td>
+                                <td>~1% on transactions</td>
                             </tr>
                             <tr>
                                 <td><strong>Notable GTM</strong></td>
@@ -976,6 +1141,10 @@
                                 <td>Early sniping infra, Web App, "Photon Points", Referrals</td>
                                 <td>YC Backing, Rapid Feature Iteration, KOLs, Rewards System</td>
                                 <td>Telegram-native, Extensive Referral Program, Simplicity</td>
+                                <td>DRIFT token airdrop, Trader Points, "Super Protocol" Vision</td>
+                                <td>Market Maker Incentivization, On-chain CLOB Innovation</td>
+                                <td>Public Good Positioning, Developer Ecosystem Enablement</td>
+                                <td>Viral Marketing, Referrals, Social Proof, Speed Focus</td>
                             </tr>
                             <tr>
                                 <td><strong>Primary Interface</strong></td>
@@ -983,21 +1152,37 @@
                                 <td>Web Application</td>
                                 <td>Web & Mobile App</td>
                                 <td>Telegram Bot</td>
+                                <td>Web Application</td>
+                                <td>Web Application</td>
+                                <td>SDK/API (Backend Infrastructure)</td>
+                                <td>Telegram Bot</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Key Metrics</strong></td>
+                                <td>N/A specific to Solana</td>
+                                <td>Significant lifetime revenue</td>
+                                <td>Rapid market share growth</td>
+                                <td>452k+ Users, $10.1B+ Volume</td>
+                                <td>$65.7B+ Perps Volume, 175k+ Traders</td>
+                                <td>$23.3M Raised, Instant Settlement CLOB</td>
+                                <td>$4.5B+ All-Time Protocol Volume</td>
+                                <td>452k+ Users, $10.1B+ Volume</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
+
             <div class="card" data-aos="fade-up">
                 <h3 class="text-2xl font-semibold mb-6 text-primary">Pro Feature Comparison</h3>
-                
+
                 <div class="tab-container">
                     <button class="tab active" data-tab="trading-features">Trading Features</button>
                     <button class="tab" data-tab="protection-features">Protection & Analytics</button>
                     <button class="tab" data-tab="unique-features">Unique Selling Points</button>
+                    <button class="tab" data-tab="innovative-tools">Innovative Tools</button>
                 </div>
-                
+
                 <div class="tab-content active" id="trading-features">
                     <div class="overflow-x-auto">
                         <table>
@@ -1008,6 +1193,10 @@
                                     <th>Photon</th>
                                     <th>Axiom</th>
                                     <th>Trojan</th>
+                                    <th>Drift Protocol</th>
+                                    <th>Phoenix</th>
+                                    <th>Openbook</th>
+                                    <th>BONKBot</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1017,12 +1206,20 @@
                                     <td>Yes (Core)</td>
                                     <td>Yes (Core)</td>
                                     <td>Yes (Core)</td>
+                                    <td>No</td>
+                                    <td>No</td>
+                                    <td>No</td>
+                                    <td>Yes</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Limit Orders</strong></td>
                                     <td>Yes</td>
                                     <td>Yes</td>
                                     <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes (CLOB Core)</td>
+                                    <td>Yes (CLOB Core)</td>
                                     <td>Yes</td>
                                 </tr>
                                 <tr>
@@ -1031,12 +1228,20 @@
                                     <td>Yes</td>
                                     <td>Implied</td>
                                     <td>Yes</td>
+                                    <td>No</td>
+                                    <td>No</td>
+                                    <td>No</td>
+                                    <td>Yes</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Copy Trading</strong></td>
                                     <td>Yes</td>
                                     <td>Implied (via Alpha Wallets)</td>
                                     <td>Implied (via Leaderboards)</td>
+                                    <td>Yes</td>
+                                    <td>No</td>
+                                    <td>No</td>
+                                    <td>No</td>
                                     <td>Yes</td>
                                 </tr>
                                 <tr>
@@ -1045,12 +1250,27 @@
                                     <td>Yes</td>
                                     <td>Yes</td>
                                     <td>Yes (via TG)</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes (via TG)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Advanced Trading</strong></td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes (Perps, Cross-Margin)</td>
+                                    <td>Yes (CLOB)</td>
+                                    <td>Yes (CLOB)</td>
+                                    <td>Basic</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="tab-content" id="protection-features">
                     <div class="overflow-x-auto">
                         <table>
@@ -1061,6 +1281,10 @@
                                     <th>Photon</th>
                                     <th>Axiom</th>
                                     <th>Trojan</th>
+                                    <th>Drift Protocol</th>
+                                    <th>Phoenix</th>
+                                    <th>Openbook</th>
+                                    <th>BONKBot</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1070,12 +1294,20 @@
                                     <td>Yes (Smart-MEV)</td>
                                     <td>Yes (Inhibition)</td>
                                     <td>Yes (Turbo/Secure)</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Basic</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Advanced Analytics</strong></td>
                                     <td>Yes</td>
                                     <td>Yes (Memescope)</td>
                                     <td>Yes</td>
+                                    <td>Basic</td>
+                                    <td>Yes (Trading Data)</td>
+                                    <td>Yes (Orderbook Data)</td>
+                                    <td>Limited (Backend Focus)</td>
                                     <td>Basic</td>
                                 </tr>
                                 <tr>
@@ -1084,12 +1316,20 @@
                                     <td>Yes</td>
                                     <td>Advanced</td>
                                     <td>Basic</td>
+                                    <td>Limited</td>
+                                    <td>No</td>
+                                    <td>No</td>
+                                    <td>Basic</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Transaction Simulation</strong></td>
                                     <td>Limited</td>
                                     <td>Yes</td>
                                     <td>Yes</td>
+                                    <td>No</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>No</td>
                                     <td>No</td>
                                 </tr>
                                 <tr>
@@ -1098,12 +1338,16 @@
                                     <td>Yes</td>
                                     <td>Yes</td>
                                     <td>Basic</td>
+                                    <td>Yes</td>
+                                    <td>Limited</td>
+                                    <td>No</td>
+                                    <td>Yes</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="tab-content" id="unique-features">
                     <div class="overflow-x-auto">
                         <table>
@@ -1114,6 +1358,10 @@
                                     <th>Photon</th>
                                     <th>Axiom</th>
                                     <th>Trojan</th>
+                                    <th>Drift Protocol</th>
+                                    <th>Phoenix</th>
+                                    <th>Openbook</th>
+                                    <th>BONKBot</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1123,12 +1371,20 @@
                                     <td>Photon Points, Web UX</td>
                                     <td>Rewards, YC Backing</td>
                                     <td>Simplicity, Strong Referrals</td>
+                                    <td>Advanced Derivatives, BET Integration</td>
+                                    <td>Instant Settlement CLOB, FIRE Token</td>
+                                    <td>Public Good, Developer Ecosystem</td>
+                                    <td>High-Speed Execution, 452k+ User Base</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Mobile App Access</strong></td>
                                     <td>TG Bot</td>
                                     <td>Web</td>
                                     <td>Yes (Native App)</td>
+                                    <td>TG Bot</td>
+                                    <td>Web</td>
+                                    <td>Web</td>
+                                    <td>No (Backend)</td>
                                     <td>TG Bot</td>
                                 </tr>
                                 <tr>
@@ -1137,6 +1393,10 @@
                                     <td>Moderate</td>
                                     <td>Strong (Points+Fees)</td>
                                     <td>Very Strong</td>
+                                    <td>Moderate (Token Points)</td>
+                                    <td>Limited</td>
+                                    <td>Limited</td>
+                                    <td>Very Strong</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Target User</strong></td>
@@ -1144,506 +1404,247 @@
                                     <td>Speed-focused Web Snipers</td>
                                     <td>Feature-seeking Pro Traders</td>
                                     <td>TG-Native Users (All levels)</td>
+                                    <td>Professional Derivatives Traders</td>
+                                    <td>Market Makers & Sophisticated Traders</td>
+                                    <td>Developers & Other Protocols</td>
+                                    <td>Fast Memecoin Traders</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- GTM Strategies Section -->
-        <section id="strategies" class="section">
-            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">Go-To-Market Playbook: What Works?</h2>
-            <p class="text-lg text-slate-800 mb-8 max-w-3xl" data-aos="fade-up">
-                Successful platforms employ a mix of community building, incentive structures, and feature-led growth to navigate the competitive landscape. Understanding these proven strategies can help inform Blinq's approach.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" data-aos="fade-up">
-                <div class="feature-card flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-xl text-primary mb-2">Strong Referral Programs</h3>
-                    <p class="text-slate-800">Multi-level rewards, significant fee sharing (e.g., Trojan, Axiom).</p>
-                </div>
-                <div class="feature-card flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-xl text-primary mb-2">Community Building</h3>
-                    <p class="text-slate-800">Direct engagement, support, alpha sharing (especially on Telegram).</p>
-                </div>
-                <div class="feature-card flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-xl text-primary mb-2">KOL & Influencer Marketing</h3>
-                    <p class="text-slate-800">Leveraging trusted voices to drive awareness and adoption (e.g., Axiom).</p>
-                </div>
-                <div class="feature-card flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-xl text-secondary mb-2">Feature-Led Growth</h3>
-                    <p class="text-slate-800">Superior sniping, robust MEV protection, unique analytics (e.g., Photon, BullX).</p>
-                </div>
-                <div class="feature-card flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
-                            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-xl text-secondary mb-2">Incentive Systems</h3>
-                    <p class="text-slate-800">Points, airdrops, trading competitions (e.g., Axiom, Photon).</p>
-                </div>
-                <div class="feature-card flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-xl text-secondary mb-2">Simplicity & Accessibility</h3>
-                    <p class="text-slate-800">Easy onboarding, especially for Telegram-native bots (e.g., Trojan).</p>
-                </div>
-            </div>
-
-            <div class="card" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold mb-6 text-primary">GTM Highlights by Platform</h3>
-                
-                <div class="tab-container">
-                    <button class="tab active" data-tab="axiom-gtm">Axiom Approach</button>
-                    <button class="tab" data-tab="trojan-gtm">Trojan Approach</button>
-                    <button class="tab" data-tab="blinq-potential">Blinq Opportunities</button>
-                </div>
-                
-                <div class="tab-content active" id="axiom-gtm">
-                    <h4 class="text-xl font-semibold mb-3 text-primary">Axiom GTM Highlights</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Success stories</span> (1 SOL to 10 SOL) to build aspiration among potential users.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Focus on close cabals</span> for token launches initially to build credibility.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Leverage Instagram influencers</span> to reach broader crypto audience.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Passive narrative:</span> Position Axiom as the go-to alternative to DEX Screener.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Collective trading and streaming by KOLs</span> to demonstrate platform capabilities.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">YC Backing</span> provided credibility and early momentum.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Strong rewards system</span> (points, fee rebates) for retention.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="trojan-gtm">
-                    <h4 class="text-xl font-semibold mb-3 text-primary">Trojan GTM Highlights</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Telegram-native:</span> Extremely low friction for onboarding Telegram's large crypto user base.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Highly effective referral program</span> with significant portion of fees paid out to referrers.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Simplicity for new users</span>, with advanced features for pros - balanced approach.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Strong brand recognition</span> carried over from other chains.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">0.9% fee for referred users</span> vs. standard 1%, creating clear incentive.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">~$57M+ in referral rewards paid</span>, showcasing the program's effectiveness.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="blinq-potential">
-                    <h4 class="text-xl font-semibold mb-3 text-primary">Blinq's Potential GTM Levers</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Trading Operator Onboarding:</span> Focus on ~100 influential operators, heavily incentivizing them with economic and reputational gains (e.g., meet-ups, high reward tiers for volume).
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Advanced Referral Rewards:</span> Implement a multi-level unlock system. Strategy similar to "stake frame."
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Gamified Weekly Rewards:</span> Web2-style weekly reward games to maintain engagement.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">High-Value Physical Asset Rewards:</span> iPhones, cars, vacation trips to create strong brand association, dopamine hits, and social media buzz. This could be a key differentiator.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 font-bold">•</span>
-                            <div>
-                                <span class="font-semibold">Cross-Chain Margining Narrative:</span> If applicable, leverage this as a unique selling proposition to founders/projects.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Financials Section -->
-        <section id="financials" class="section">
-            <h2 class="text-3xl font-bold section-title mb-8" data-aos="fade-right">The Money Game: Revenue & Market Share</h2>
-            <p class="text-lg text-slate-800 mb-8 max-w-3xl" data-aos="fade-up">
-                Monetization in this space is primarily driven by transaction fees, with market share being highly contested. The data shows a dynamic market where new players can rapidly gain traction.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10" data-aos="fade-up">
-                <div class="feature-card">
-                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Market Share Snapshot</h3>
-                    <p class="text-sm text-slate-800 mb-4 text-center">Est. Daily Volume - Q1/Q2 2025</p>
-                    <div class="chart-container h-80">
-                        <canvas id="marketShareChart"></canvas>
-                    </div>
-                    <p class="text-sm text-slate-800 mt-4 text-center">Axiom demonstrated a significant surge in market share by early 2025. Photon maintained a strong position, with BullX and Trojan also as key players.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="text-xl font-semibold mb-4 text-primary text-center">Top Earner Snapshot</h3>
-                    <p class="text-sm text-slate-800 mb-4 text-center">Est. Lifetime Revenue</p>
-                    <div class="chart-container h-80">
-                        <canvas id="topEarnersChart"></canvas>
-                    </div>
-                    <p class="text-sm text-slate-800 mt-4 text-center">Photon leads in reported lifetime revenue. Axiom and Trojan also show substantial earnings, reflecting the high monetization potential in this space.</p>
-                </div>
-            </div>
-
-            <div class="card" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold mb-6 text-primary">Revenue Models & Financials</h3>
-                
-                <div class="tab-container">
-                    <button class="tab active" data-tab="revenue-models">Revenue Models</button>
-                    <button class="tab" data-tab="daily-metrics">Daily Metrics</button>
-                    <button class="tab" data-tab="trends">Market Trends</button>
-                </div>
-                
-                <div class="tab-content active" id="revenue-models">
-                    <div class="bg-primary bg-opacity-10 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-3">Dominant Fee Structure</h4>
-                        <p class="mb-4">
-                            The primary revenue model in the Solana pro-trading space is a <span class="font-semibold text-primary">transaction fee</span>, typically ranging from <span class="font-semibold text-primary">0.7% to 1%</span> on swaps.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="text-primary mr-2 font-bold">•</span>
-                                <div>
-                                    <span class="font-semibold">Photon:</span> ~1% on buy/sell transactions.
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-2 font-bold">•</span>
-                                <div>
-                                    <span class="font-semibold">BullX:</span> ~1% on swaps.
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-2 font-bold">•</span>
-                                <div>
-                                    <span class="font-semibold">Axiom:</span> 0.7% - 0.9% with tiered referral discounts.
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-2 font-bold">•</span>
-                                <div>
-                                    <span class="font-semibold">Trojan:</span> ~1% standard, 0.9% for referred users.
-                                </div>
-                            </li>
-                        </ul>
-                        <p class="mt-4">
-                            This seemingly simple model, when applied to high trading volumes, generates significant revenue for leading platforms. The consistency across competitors suggests this is the market-acceptable standard.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="tab-content" id="daily-metrics">
+                <div class="tab-content" id="innovative-tools">
                     <div class="overflow-x-auto">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Platform</th>
-                                    <th>Avg. Daily Revenue (Recent)</th>
-                                    <th>Avg. Daily Volume (Recent)</th>
-                                    <th>Fee % of Volume</th>
-                                    <th>Data Source/Period</th>
+                                    <th>Innovative Tool</th>
+                                    <th>Description</th>
+                                    <th>Target User</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td><strong>BullX</strong></td>
+                                    <td>Pump Vision</td>
+                                    <td>Advanced token launch detection with predictive analytics</td>
+                                    <td>Early Snipers, Memecoin Traders</td>
+                                </tr>
+                                <tr>
                                     <td><strong>Photon</strong></td>
-                                    <td>~$1.35M</td>
-                                    <td>~$135M</td>
-                                    <td>~1%</td>
-                                    <td>91-day avg. ending Q1/Q2 2025</td>
+                                    <td>Memescope</td>
+                                    <td>Real-time memecoin analytics dashboard with social sentiment tracking</td>
+                                    <td>Data-Driven Traders</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Axiom</strong></td>
-                                    <td>~$250k - $1M+</td>
-                                    <td>~$30M - $120M+</td>
-                                    <td>~0.8% (avg)</td>
-                                    <td>Based on 7-day figures, May 2025</td>
+                                    <td>Wallet Analytics Suite</td>
+                                    <td>Advanced on-chain tracking of "smart money" wallets with alerts</td>
+                                    <td>Copy Traders, Alpha Seekers</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Trojan</strong></td>
-                                    <td>~$2.1M</td>
-                                    <td>~$210M</td>
-                                    <td>~1%</td>
-                                    <td>7-day MA, May 2025</td>
+                                    <td>Turbo Mode</td>
+                                    <td>High-priority transaction routing with MEV protection</td>
+                                    <td>Speed-Focused Traders</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>BullX</strong></td>
-                                    <td>N/A specific to Solana</td>
-                                    <td>N/A specific to Solana</td>
-                                    <td>~1%</td>
-                                    <td>Multi-chain focus makes daily Solana metrics unclear</td>
+                                    <td><strong>Drift Protocol</strong></td>
+                                    <td>Cross-Margin Engine</td>
+                                    <td>Unified collateral system across spot/perps for capital efficiency</td>
+                                    <td>Sophisticated Portfolio Managers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phoenix</strong></td>
+                                    <td>Instant Settlement CLOB</td>
+                                    <td>On-chain order book with instant transaction finality</td>
+                                    <td>Market Makers, HFT Traders</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Openbook</strong></td>
+                                    <td>Composable Order Book SDK</td>
+                                    <td>Development toolkit for building custom trading interfaces</td>
+                                    <td>Developers, Protocols</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>BONKBot</strong></td>
+                                    <td>BONK AI Scanner</td>
+                                    <td>AI-powered memecoin sentiment analysis and trading signals</td>
+                                    <td>Retail Traders, Memecoin Enthusiasts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>GMGN AI Bot</strong></td>
+                                    <td>Smart Money Mirroring</td>
+                                    <td>Automated copy trading of identified "alpha" wallets</td>
+                                    <td>Passive Traders, Alpha Seekers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SolTradingBot</strong></td>
+                                    <td>DEX Aggregation Layer</td>
+                                    <td>Cross-DEX execution for optimal pricing (Jupiter, Orca integration)</td>
+                                    <td>Price-Sensitive Traders</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lifinity</strong></td>
+                                    <td>Proactive Market Maker</td>
+                                    <td>Dynamic liquidity allocation to mitigate impermanent loss</td>
+                                    <td>Conservative LPs, Yield Optimizers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bonfida (SNS)</strong></td>
+                                    <td>Solana Name Service</td>
+                                    <td>Human-readable .sol domains for wallet addresses</td>
+                                    <td>Long-term Solana Ecosystem Users</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-sm text-slate-800 mt-4">
-                        <span class="font-semibold">Note:</span> Data sourced from Dune Analytics dashboards and publicly reported figures. Daily metrics fluctuate significantly based on market conditions and trading activity.
-                    </p>
-                </div>
-                
-                <div class="tab-content" id="trends">
-                    <h4 class="text-xl font-semibold mb-3">Key Financial Trends</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-accent bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
-                                    <line x1="12" y1="2" x2="12" y2="6"></line>
-                                    <line x1="12" y1="18" x2="12" y2="22"></line>
-                                    <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
-                                    <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
-                                    <line x1="2" y1="12" x2="6" y2="12"></line>
-                                    <line x1="18" y1="12" x2="22" y2="12"></line>
-                                    <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
-                                    <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="font-semibold">Rapid Growth Trajectory:</span> Market leaders have achieved significant revenue scale within relatively short timeframes (months to 1-2 years).
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-accent bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
-                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                                    <polyline points="17 6 23 6 23 12"></polyline>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="font-semibold">Market Share Volatility:</span> Axiom's ascension to market share leadership demonstrates that rapid shifts in power dynamics are possible with the right execution.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-accent bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="8 12 12 16 16 12"></polyline>
-                                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="font-semibold">Revenue Sharing Investment:</span> Platforms like Trojan have paid out substantial portions of their fees (~$57M+) to referrers, indicating this is viewed as a growth investment rather than pure cost.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-accent bg-opacity-10 flex items-center justify-center mr-3 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
-                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="font-semibold">Emerging Fee Differentiation:</span> While 1% remains standard, platforms like Axiom have begun experimenting with tiered fee structures as a competitive advantage.
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Future Section -->
         <section id="future" class="section">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-6 sm:mb-8" data-aos="fade-right">Future Horizons: Emerging Trends</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-6 sm:mb-8" data-aos="fade-right">Future Horizons:
+                Emerging Trends</h2>
             <p class="text-base sm:text-lg text-slate-800 mb-6 sm:mb-8 max-w-3xl" data-aos="fade-up">
-                The Solana pro-trading landscape is expected to continue evolving with new technological advancements and shifting user demands. These emerging trends will shape the next generation of trading tools.
+                The Solana pro-trading landscape is expected to continue evolving with new technological advancements
+                and shifting user demands. These emerging trends will shape the next generation of trading tools.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-10" data-aos="fade-up">
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-primary">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5">
+                            </path>
                             <path d="M9 18h6"></path>
                             <path d="M10 22h4"></path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-xl text-primary mb-3 text-center">AI/ML Integration</h3>
-                    <p class="text-slate-800">AI-powered trading bots, predictive analytics, automated strategy generation, and enhanced risk management tools could offer traders more sophisticated insights.</p>
+                    <p class="text-slate-800">AI-powered trading bots, predictive analytics, automated strategy
+                        generation, and enhanced risk management tools could offer traders more sophisticated insights.
+                    </p>
                 </div>
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-primary">
                             <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
                             <polyline points="17 2 12 7 7 2"></polyline>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-xl text-primary mb-3 text-center">Cross-Chain Functionality</h3>
-                    <p class="text-slate-800">Seamless trading across multiple blockchains and aggregation of liquidity from diverse sources to expand opportunities and increase capital efficiency.</p>
+                    <p class="text-slate-800">Seamless trading across multiple blockchains and aggregation of liquidity
+                        from diverse sources to expand opportunities and increase capital efficiency.</p>
                 </div>
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-primary">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="3" y1="9" x2="21" y2="9"></line>
                             <line x1="9" y1="21" x2="9" y2="9"></line>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-xl text-primary mb-3 text-center">Institutional-Grade Features</h3>
-                    <p class="text-slate-800">Robust APIs, on-chain compliance solutions, deeper liquidity access, and features catering to sophisticated institutional participants.</p>
+                    <p class="text-slate-800">Robust APIs, on-chain compliance solutions, deeper liquidity access, and
+                        features catering to sophisticated institutional participants.</p>
                 </div>
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-secondary">
                             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                             <line x1="12" y1="18" x2="12.01" y2="18"></line>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-xl text-secondary mb-3 text-center">Enhanced Mobile Experience</h3>
-                    <p class="text-slate-800">Fully-featured, native mobile applications that go beyond basic Telegram bot interactions, offering comprehensive trading and portfolio management on the go.</p>
+                    <p class="text-slate-800">Fully-featured, native mobile applications that go beyond basic Telegram
+                        bot interactions, offering comprehensive trading and portfolio management on the go.</p>
                 </div>
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-secondary">
                             <path d="M12 1v22"></path>
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-xl text-secondary mb-3 text-center">Gamification & Rewards</h3>
-                    <p class="text-slate-800">More engaging reward mechanisms beyond simple fee rebates, potentially including NFTs, tiered access, or Blinq's proposed physical asset rewards.</p>
+                    <p class="text-slate-800">More engaging reward mechanisms beyond simple fee rebates, potentially
+                        including NFTs, tiered access, or Blinq's proposed physical asset rewards.</p>
                 </div>
                 <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-secondary">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                             <circle cx="8.5" cy="8.5" r="1.5"></circle>
                             <polyline points="21 15 16 10 5 21"></polyline>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-xl text-secondary mb-3 text-center">UX/UI Simplification</h3>
-                    <p class="text-slate-800">Making complex trading strategies and tools more intuitive and accessible to a broader range of "pro-sumer" traders to lower the barrier to entry.</p>
+                    <p class="text-slate-800">Making complex trading strategies and tools more intuitive and accessible
+                        to a broader range of "pro-sumer" traders to lower the barrier to entry.</p>
                 </div>
             </div>
 
             <div class="card" data-aos="fade-up">
                 <h3 class="text-2xl font-semibold mb-6 text-primary">Outlook & Opportunities</h3>
                 <p class="text-slate-800 mb-6">
-                    These emerging trends point to a maturing market that will continue to evolve in sophistication while also becoming more accessible to a wider range of traders. The competition will intensify, but opportunities remain for platforms with distinctive strengths.
+                    These emerging trends point to a maturing market that will continue to evolve in sophistication
+                    while also becoming more accessible to a wider range of traders. The competition will intensify, but
+                    opportunities remain for platforms with distinctive strengths.
                 </p>
-                
+
                 <div class="bg-primary bg-opacity-10 p-6 rounded-lg">
                     <h4 class="text-xl font-semibold mb-3 text-primary">Key Takeaways for Future Success</h4>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Technical Performance:</span> Will remain a fundamental requirement, with speed and reliability as non-negotiable baselines.
+                                <span class="font-semibold">Technical Performance:</span> Will remain a fundamental
+                                requirement, with speed and reliability as non-negotiable baselines.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">User Experience:</span> The winners will be those who can balance advanced features with intuitive interfaces.
+                                <span class="font-semibold">User Experience:</span> The winners will be those who can
+                                balance advanced features with intuitive interfaces.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Community & Incentives:</span> Innovative approaches to community building and rewards will differentiate platforms beyond core features.
+                                <span class="font-semibold">Community & Incentives:</span> Innovative approaches to
+                                community building and rewards will differentiate platforms beyond core features.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 font-bold">•</span>
                             <div>
-                                <span class="font-semibold">Adaptability:</span> The ecosystem and user needs will continue to evolve, requiring platforms to remain nimble and responsive.
+                                <span class="font-semibold">Adaptability:</span> The ecosystem and user needs will
+                                continue to evolve, requiring platforms to remain nimble and responsive.
                             </div>
                         </li>
                     </ul>
@@ -1653,9 +1654,11 @@
 
         <!-- Blinq Section -->
         <section id="blinq" class="section">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-6 sm:mb-8" data-aos="fade-right">Blinq's Battlefield: Strategic Considerations</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-6 sm:mb-8" data-aos="fade-right">Blinq's
+                Battlefield: Strategic Considerations</h2>
             <p class="text-base sm:text-lg text-slate-800 mb-6 sm:mb-8 max-w-3xl" data-aos="fade-up">
-                This analysis provides a foundation for Blinq to carve out its unique position and capitalize on market opportunities. Understanding competitor strengths and market dynamics is crucial for success.
+                This analysis provides a foundation for Blinq to carve out its unique position and capitalize on market
+                opportunities. Understanding competitor strengths and market dynamics is crucial for success.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-8" data-aos="fade-up">
@@ -1663,43 +1666,53 @@
                     <h3 class="text-2xl font-semibold mb-6 text-primary text-center">Key Learnings for Blinq</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start bg-primary bg-opacity-5 p-4 rounded-lg">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
                                 1
                             </div>
                             <div>
-                                <span class="font-semibold">Speed is Non-Negotiable:</span> Infrastructure must be top-tier for competitive advantage in the millisecond-critical trading environment.
+                                <span class="font-semibold">Speed is Non-Negotiable:</span> Infrastructure must be
+                                top-tier for competitive advantage in the millisecond-critical trading environment.
                             </div>
                         </li>
                         <li class="flex items-start bg-primary bg-opacity-5 p-4 rounded-lg">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
                                 2
                             </div>
                             <div>
-                                <span class="font-semibold">Meme Coins are Central:</span> Features must cater to these high-volume use cases that drive significant platform activity.
+                                <span class="font-semibold">Meme Coins are Central:</span> Features must cater to these
+                                high-volume use cases that drive significant platform activity.
                             </div>
                         </li>
                         <li class="flex items-start bg-primary bg-opacity-5 p-4 rounded-lg">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
                                 3
                             </div>
                             <div>
-                                <span class="font-semibold">Community & Trust are Key:</span> GTM requires authentic engagement efforts and consistent performance to build credibility.
+                                <span class="font-semibold">Community & Trust are Key:</span> GTM requires authentic
+                                engagement efforts and consistent performance to build credibility.
                             </div>
                         </li>
                         <li class="flex items-start bg-primary bg-opacity-5 p-4 rounded-lg">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
                                 4
                             </div>
                             <div>
-                                <span class="font-semibold">Telegram is Essential:</span> Critical channel for reach and engagement with the crypto community.
+                                <span class="font-semibold">Telegram is Essential:</span> Critical channel for reach and
+                                engagement with the crypto community.
                             </div>
                         </li>
                         <li class="flex items-start bg-primary bg-opacity-5 p-4 rounded-lg">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-3 flex-shrink-0 font-bold">
                                 5
                             </div>
                             <div>
-                                <span class="font-semibold">Differentiation is Possible:</span> Unique value propositions can lead to rapid growth even in a crowded market.
+                                <span class="font-semibold">Differentiation is Possible:</span> Unique value
+                                propositions can lead to rapid growth even in a crowded market.
                             </div>
                         </li>
                     </ul>
@@ -1710,36 +1723,47 @@
                     <div class="space-y-4">
                         <div class="bg-secondary bg-opacity-10 p-4 rounded-lg border-l-4 border-secondary">
                             <h4 class="font-semibold text-secondary flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="mr-2">
                                     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                     <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                 </svg>
                                 Superior Sniping Infrastructure
                             </h4>
-                            <p class="text-slate-800">Demonstrably faster or more effective sniping can be a major draw for users in this speed-critical market.</p>
+                            <p class="text-slate-800">Demonstrably faster or more effective sniping can be a major draw
+                                for users in this speed-critical market.</p>
                         </div>
                         <div class="bg-secondary bg-opacity-10 p-4 rounded-lg border-l-4 border-secondary">
                             <h4 class="font-semibold text-secondary flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="mr-2">
                                     <circle cx="12" cy="8" r="7"></circle>
                                     <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                                 </svg>
                                 Unique Reward Systems
                             </h4>
-                            <p class="text-slate-800">Physical assets, operator incentives, and gamified rewards could be highly disruptive and create strong brand loyalty.</p>
+                            <p class="text-slate-800">Physical assets, operator incentives, and gamified rewards could
+                                be highly disruptive and create strong brand loyalty.</p>
                         </div>
                         <div class="bg-secondary bg-opacity-10 p-4 rounded-lg border-l-4 border-secondary">
                             <h4 class="font-semibold text-secondary flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="mr-2">
                                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                                 </svg>
                                 Trader-Centric Advanced Features
                             </h4>
-                            <p class="text-slate-800">Tools that genuinely empower professional traders beyond basic bot functions, such as advanced analytics and customizable strategies.</p>
+                            <p class="text-slate-800">Tools that genuinely empower professional traders beyond basic bot
+                                functions, such as advanced analytics and customizable strategies.</p>
                         </div>
                         <div class="bg-secondary bg-opacity-10 p-4 rounded-lg border-l-4 border-secondary">
                             <h4 class="font-semibold text-secondary flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="mr-2">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -1747,15 +1771,19 @@
                                 </svg>
                                 Strong Operator Network
                             </h4>
-                            <p class="text-slate-800">Concentrating on onboarding and deeply incentivizing ~100 influential trading operators could create a powerful growth flywheel.</p>
+                            <p class="text-slate-800">Concentrating on onboarding and deeply incentivizing ~100
+                                influential trading operators could create a powerful growth flywheel.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="card" data-aos="fade-up">
                 <p class="text-lg text-slate-800 text-center max-w-3xl mx-auto">
-                    Blinq should lean into its <span class="font-semibold text-primary">"Solana centric,"</span> <span class="font-semibold text-secondary">"meme centric,"</span> and <span class="font-semibold text-accent">"trader centric"</span> positioning, ensuring all product and marketing efforts align with these core tenets.
+                    Blinq should lean into its <span class="font-semibold text-primary">"Solana centric,"</span> <span
+                        class="font-semibold text-secondary">"meme centric,"</span> and <span
+                        class="font-semibold text-accent">"trader centric"</span> positioning, ensuring all product and
+                    marketing efforts align with these core tenets.
                 </p>
             </div>
         </section>
@@ -1778,8 +1806,10 @@
     </footer>
 
     <!-- Back to top button -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 hover:bg-primary-dark focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 hover:bg-primary-dark focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
@@ -1817,7 +1847,7 @@
                     card.classList.remove('card-dark');
                 }
             });
-            
+
             // Update chart theme if charts are initialized
             if (window.updateChartTheme) {
                 window.updateChartTheme(isDark);
@@ -1848,12 +1878,12 @@
                 const parentCard = tab.closest('.card');
                 // Find all tab content elements in this card
                 const tabContents = parentCard.querySelectorAll('.tab-content');
-                
+
                 // Remove active class from all tabs
                 tabs.forEach(t => t.classList.remove('active'));
                 // Add active class to clicked tab
                 tab.classList.add('active');
-                
+
                 // Hide all tab contents
                 tabContents.forEach(content => content.classList.remove('active'));
                 // Show the content corresponding to the clicked tab
@@ -1869,12 +1899,12 @@
         function animateCounters() {
             const counters = document.querySelectorAll('.kpi-value');
             const speed = 200; // Lower = faster
-            
+
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-count');
                 const count = +counter.innerText;
                 const increment = target / speed;
-                
+
                 if (count < target) {
                     counter.innerText = Math.ceil(count + increment);
                     setTimeout(() => animateCounters(), 1);
@@ -1885,23 +1915,23 @@
         }
 
         // Initialize AOS animation library and charts
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Mobile menu functionality
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const closeMobileMenu = document.getElementById('close-mobile-menu');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             if (mobileMenuToggle && mobileMenu && closeMobileMenu) {
                 mobileMenuToggle.addEventListener('click', () => {
                     mobileMenu.classList.remove('translate-x-full');
                     document.body.classList.add('overflow-hidden');
                 });
-                
+
                 closeMobileMenu.addEventListener('click', () => {
                     mobileMenu.classList.add('translate-x-full');
                     document.body.classList.remove('overflow-hidden');
                 });
-                
+
                 // Close mobile menu when clicking on a link
                 document.querySelectorAll('#mobile-menu a').forEach(link => {
                     link.addEventListener('click', () => {
@@ -1910,36 +1940,36 @@
                     });
                 });
             }
-            
+
             AOS.init({
                 duration: 800,
                 easing: 'ease-in-out',
                 once: true
             });
-            
+
             // Start counter animation after a slight delay
             setTimeout(animateCounters, 500);
-            
+
             // Initialize charts
             setupCharts();
-            
+
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
+
                     if (targetElement) {
                         // Account for fixed header height
                         const headerHeight = document.querySelector('.header').offsetHeight;
                         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                        
+
                         window.scrollTo({
                             top: targetPosition,
                             behavior: 'smooth'
                         });
-                        
+
                         // Update active nav link
                         document.querySelectorAll('nav a').forEach(link => {
                             link.classList.remove('active');
@@ -1948,24 +1978,24 @@
                     }
                 });
             });
-            
+
             // Highlight the current section in navigation
             function highlightNavOnScroll() {
                 const sections = document.querySelectorAll('.section');
                 const navLinks = document.querySelectorAll('nav a');
-                
+
                 let currentSectionId = '';
                 const headerHeight = document.querySelector('.header').offsetHeight;
-                
+
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop - headerHeight - 100;
                     const sectionBottom = sectionTop + section.offsetHeight;
-                    
+
                     if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
                         currentSectionId = `#${section.id}`;
                     }
                 });
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === currentSectionId) {
@@ -1973,7 +2003,7 @@
                     }
                 });
             }
-            
+
             // Add scroll event for navigation highlight
             window.addEventListener('scroll', highlightNavOnScroll);
             // Call once on page load
@@ -1989,7 +2019,7 @@
                 purple: '#8b5cf6',   // Accent2 (Trojan)
                 pink: '#ec4899'      // Other platforms
             };
-            
+
             const commonChartOptions = {
                 responsive: true,
                 maintainAspectRatio: false,
@@ -2018,16 +2048,16 @@
                 },
                 scales: {
                     x: {
-                        ticks: { 
+                        ticks: {
                             color: '#334155', // Explicitly set to darker color
-                            font: { size: 10, weight: 'medium' } 
+                            font: { size: 10, weight: 'medium' }
                         },
                         grid: { display: false }
                     },
                     y: {
-                        ticks: { 
+                        ticks: {
                             color: '#334155', // Explicitly set to darker color
-                            font: { size: 10, weight: 'medium' } 
+                            font: { size: 10, weight: 'medium' }
                         },
                         grid: { color: '#f1f5f9', drawBorder: false }
                     }
@@ -2039,22 +2069,22 @@
                     }
                 }
             };
-            
+
             const commonHorizontalChartOptions = {
                 ...commonChartOptions,
                 indexAxis: 'y',
                 scales: {
                     x: {
-                        ticks: { font: {size: 10, weight: 'medium'} },
-                        grid: { color: '#f1f5f9', drawBorder: false } 
+                        ticks: { font: { size: 10, weight: 'medium' } },
+                        grid: { color: '#f1f5f9', drawBorder: false }
                     },
                     y: {
-                        ticks: { font: {size: 11, weight: 'medium'} },
+                        ticks: { font: { size: 11, weight: 'medium' } },
                         grid: { display: false }
                     }
                 }
             };
-            
+
             // Update chart options based on theme
             function updateChartTheme(isDark) {
                 const textColor = isDark ? '#f1f5f9' : '#334155';
@@ -2062,7 +2092,7 @@
                 const tooltipBgColor = isDark ? 'rgba(15, 23, 42, 0.95)' : 'rgba(255, 255, 255, 0.9)';
                 const tooltipBorderColor = isDark ? 'rgba(255, 255, 255, 0.2)' : '#e2e8f0';
                 const chartBgColor = isDark ? 'rgba(15, 23, 42, 0.8)' : 'white';
-                
+
                 // Update chart container backgrounds
                 document.querySelectorAll('.chart-container').forEach(container => {
                     container.style.backgroundColor = chartBgColor;
@@ -2077,9 +2107,9 @@
                         container.style.padding = '0';
                     }
                 });
-                
+
                 const charts = [lifetimeVolumeChart, lifetimeUsersChart, lifetimeRevenueChart, marketShareChart, topEarnersChart];
-                
+
                 charts.forEach(chart => {
                     if (chart) {
                         // Update tooltip styles
@@ -2087,7 +2117,7 @@
                         chart.options.plugins.tooltip.titleColor = textColor;
                         chart.options.plugins.tooltip.bodyColor = textColor;
                         chart.options.plugins.tooltip.borderColor = tooltipBorderColor;
-                        
+
                         // Update scales
                         if (chart.options.scales.x) {
                             chart.options.scales.x.ticks.color = textColor;
@@ -2099,10 +2129,10 @@
                             chart.options.scales.y.ticks.color = textColor;
                             chart.options.scales.y.grid.color = gridColor;
                         }
-                        
+
                         // Update legend
                         chart.options.plugins.legend.labels.color = textColor;
-                        
+
                         chart.update();
                     }
                 });
@@ -2113,15 +2143,22 @@
             const lifetimeVolumeChart = lifetimeVolumeCtx ? new Chart(lifetimeVolumeCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Photon', 'BullX', 'Axiom', 'Trojan'],
+                    labels: ['Photon', 'BullX', 'Axiom', 'Trojan', 'Drift Protocol', 'BONKBot', 'Openbook', 'GMGN AI Bot', 'SolTradingBot', 'Lifinity', 'Phoenix'],
                     datasets: [{
                         label: 'Est. Lifetime Volume (Billions USD)',
-                        data: [40, 3.59, 9.95, 25.7],
+                        data: [40, 3.59, 9.95, 25.7, 65.7, 10.1, 4.5, 8.7, 2.3, 1.8, 23.3],
                         backgroundColor: [
                             CHART_COLORS.blue,
                             CHART_COLORS.green,
                             CHART_COLORS.orange,
-                            CHART_COLORS.purple
+                            CHART_COLORS.purple,
+                            '#EF4444',
+                            '#FBBF24',
+                            '#A78BFA',
+                            '#FB923C',
+                            '#EC4899',
+                            '#14B8A6',
+                            '#34D399'
                         ]
                     }]
                 },
@@ -2133,15 +2170,23 @@
             const lifetimeUsersChart = lifetimeUsersCtx ? new Chart(lifetimeUsersCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Photon', 'BullX', 'Axiom', 'Trojan'],
+                    labels: ['Photon', 'BullX', 'Axiom', 'Trojan', 'Drift Protocol', 'BONKBot', 'Bonfida (SNS)', 'GMGN AI Bot', 'SolTradingBot', 'Lifinity', 'Phoenix', 'Openbook'],
                     datasets: [{
                         label: 'Est. Lifetime Users (Millions)',
-                        data: [1.3, 1, 0.368, 1.5],
+                        data: [1.3, 1, 0.368, 1.5, 0.175, 0.452, 0.128, 0.4, 0.07, 0.095, 0.145, 0.085],
                         backgroundColor: [
                             CHART_COLORS.blue,
                             CHART_COLORS.green,
                             CHART_COLORS.orange,
-                            CHART_COLORS.purple
+                            CHART_COLORS.purple,
+                            '#EF4444',
+                            '#FBBF24',
+                            '#A78BFA',
+                            '#FB923C',
+                            '#EC4899',
+                            '#14B8A6',
+                            '#34D399',
+                            '#9333EA'
                         ]
                     }]
                 },
@@ -2153,42 +2198,58 @@
             const lifetimeRevenueChart = lifetimeRevenueCtx ? new Chart(lifetimeRevenueCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Photon', 'BullX', 'Axiom', 'Trojan'],
+                    labels: ['Photon', 'BullX', 'Axiom', 'Trojan', 'Drift Protocol', 'Lifinity', 'GMGN AI Bot', 'SolTradingBot', 'Bonfida (SNS)', 'Phoenix', 'BONKBot', 'Openbook'],
                     datasets: [{
                         label: 'Est. Lifetime Revenue (Millions USD)',
-                        data: [386, 188, 101, 180],
+                        data: [386, 188, 101, 180, 11.8, 3.9, 17.2, 6.5, 8.3, 21.5, 16.8, 5.2],
                         backgroundColor: [
                             CHART_COLORS.blue,
                             CHART_COLORS.green,
                             CHART_COLORS.orange,
-                            CHART_COLORS.purple
+                            CHART_COLORS.purple,
+                            '#EF4444',
+                            '#34D399',
+                            '#FBBF24',
+                            '#EC4899',
+                            '#F97316',
+                            '#38BDF8',
+                            '#FB923C',
+                            '#9333EA'
                         ]
                     }]
                 },
                 options: commonChartOptions
             }) : null;
-            
+
             // Chart 4: Market Share
             const marketShareCtx = document.getElementById('marketShareChart');
             const marketShareChart = marketShareCtx ? new Chart(marketShareCtx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Axiom', 'Photon', 'BullX', 'Trojan', 'Others'],
+                    labels: ['Axiom', 'Photon', 'BullX', 'Trojan', 'Drift Protocol', 'BONKBot', 'Phoenix', 'Openbook', 'GMGN AI Bot', 'SolTradingBot', 'Lifinity', 'Bonfida (SNS)', 'Others'],
                     datasets: [{
                         label: 'Market Share (Q1/Q2 2025)',
-                        data: [41, 22.5, 12.5, 7.5, 16.5],
+                        data: [22, 18, 10, 7, 12, 8, 6, 3, 4, 2, 3, 3, 2],
                         backgroundColor: [
                             CHART_COLORS.orange,
                             CHART_COLORS.blue,
                             CHART_COLORS.green,
                             CHART_COLORS.purple,
+                            '#EF4444',
+                            '#FBBF24',
+                            '#34D399',
+                            '#A78BFA',
+                            '#FB923C',
+                            '#EC4899',
+                            '#14B8A6',
+                            '#F97316',
                             CHART_COLORS.pink
                         ],
                         hoverOffset: 15
                     }]
                 },
-                options: { 
-                    ...commonChartOptions, 
+                options: {
+                    ...commonChartOptions,
                     cutout: '65%',
                     plugins: {
                         ...commonChartOptions.plugins,
@@ -2203,7 +2264,7 @@
                         },
                         tooltip: {
                             callbacks: {
-                                label: function(context) {
+                                label: function (context) {
                                     const label = context.label || '';
                                     const value = context.raw || 0;
                                     return `${label}: ${value}%`;
@@ -2213,38 +2274,73 @@
                     }
                 }
             }) : null;
-            
+
             // Chart 5: Top Earners
             const topEarnersCtx = document.getElementById('topEarnersChart');
             const topEarnersChart = topEarnersCtx ? new Chart(topEarnersCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Photon', 'BullX', 'Trojan', 'Axiom'],
+                    labels: ['Photon', 'BullX', 'Trojan', 'Axiom', 'Phoenix', 'GMGN AI Bot', 'BONKBot', 'Drift Protocol', 'Bonfida (SNS)', 'Openbook', 'Lifinity'],
                     datasets: [{
                         label: 'Est. Lifetime Revenue (Millions USD)',
-                        data: [386, 188, 180, 101],
+                        data: [386, 188, 180, 101, 21.5, 17.2, 16.8, 11.8, 8.3, 5.2, 3.9],
                         backgroundColor: [
                             CHART_COLORS.blue,
                             CHART_COLORS.green,
                             CHART_COLORS.purple,
-                            CHART_COLORS.orange
+                            CHART_COLORS.orange,
+                            '#38BDF8',
+                            '#FBBF24',
+                            '#FB923C',
+                            '#EF4444',
+                            '#F97316',
+                            '#9333EA',
+                            '#34D399'
                         ]
                     }]
                 },
                 options: commonHorizontalChartOptions
             }) : null;
 
+            // Chart 6: Monthly Growth Rate
+            const growthRateCtx = document.getElementById('growthRateChart');
+            const growthRateChart = growthRateCtx ? new Chart(growthRateCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['BullX', 'Photon', 'Axiom', 'Trojan', 'Phoenix', 'Drift Protocol', 'Openbook', 'GMGN AI Bot', 'SolTradingBot', 'Lifinity', 'Bonfida (SNS)', 'BONKBot'],
+                    datasets: [{
+                        label: 'Monthly User Growth Rate (%)',
+                        data: [28.5, 21.7, 14.3, 19.8, 17.2, 12.9, 8.5, 22.6, 15.8, 9.3, 18.7, 20.5],
+                        backgroundColor: [
+                            CHART_COLORS.green,
+                            CHART_COLORS.blue,
+                            CHART_COLORS.orange,
+                            CHART_COLORS.purple,
+                            '#34D399',
+                            '#EF4444',
+                            '#A78BFA',
+                            '#FBBF24',
+                            '#EC4899',
+                            '#14B8A6',
+                            '#F97316',
+                            '#FB923C'
+                        ]
+                    }]
+                },
+                options: commonChartOptions
+            }) : null;
+
             // Set initial chart theme
             const isDarkTheme = document.body.classList.contains('dark-theme');
             updateChartTheme(isDarkTheme);
-            
+
             // Add the updateChartTheme function to the global scope
             window.updateChartTheme = updateChartTheme;
         }
 
         // Back to top button functionality
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopButton.classList.remove('translate-y-20', 'opacity-0');
@@ -2254,7 +2350,7 @@
                 backToTopButton.classList.remove('translate-y-0', 'opacity-100');
             }
         });
-        
+
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -2264,24 +2360,24 @@
 
         // Add this just before the end of the setupCharts function
         // Force high contrast chart labels
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // If the chart doesn't use our high contrast settings, force it
-            setTimeout(function() {
+            setTimeout(function () {
                 document.querySelectorAll('.chart-container canvas').forEach(canvas => {
                     const ctx = canvas.getContext('2d');
                     if (ctx) {
                         ctx.fillStyle = "#1e293b"; // Dark text for light mode
                         ctx.font = "bold 12px Inter";
-                        
+
                         if (document.body.classList.contains('dark-theme')) {
                             ctx.fillStyle = "#f8fafc"; // Light text for dark mode
                         }
                     }
                 });
-                
+
                 // Force update charts after theme changes
-                document.getElementById('theme-toggle').addEventListener('click', function() {
-                    setTimeout(function() {
+                document.getElementById('theme-toggle').addEventListener('click', function () {
+                    setTimeout(function () {
                         updateChartTheme(document.body.classList.contains('dark-theme'));
                     }, 100);
                 });
@@ -2289,4 +2385,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>
